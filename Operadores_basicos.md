@@ -58,3 +58,11 @@ O javascript suporta diversos operadores, considerados simbolos "especiais" para
     }
 
   ```
+- Typeof: Retorna uma strig indicando o tipo de operando, ou seja, se o operando é number, string, object etc...
+  ```javascript
+     //Exemplo:
+     var op1 = 3;
+     var op2 = new Date(); 
+
+    typeof op1; //vai retornar number
+    typeof op2; //vai retronar fuction

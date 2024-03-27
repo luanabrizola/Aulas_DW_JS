@@ -13,3 +13,15 @@
         let n1=100
         console.logo(n1)
     ```
+## Exercicos de fixação referente aos dados
+1. Quais são os tipos primitivos de dados? Dê um exemplo de cada um.
+   - Boolean: let temChuva = true;
+   - Number: let idade = 25;
+   - String: let nome = "Alice";
+   - Undefined: let x;
+   - Null: let x = null;
+
+2. Dê um exemplo de como remover uma propriedade de objeto.
+   ```javascript
+      delete pessoa.cidade;
+``````
