@@ -14,9 +14,21 @@ let contato2 = {
     telefone: 9552565655
 }
 
-contato1.nome = "José"
-json1.replace("João", "José")
-contato1.cpf='19201921029102'
-contato1["cpf"] = '032323'
-console.log(contato1)
-console.log(json1)
+// contato1.nome = "José"
+// json1.replace("João", "José")
+// contato1.cpf='19201921029102'
+// contato1["cpf"] = '032323'
+// console.log(contato1)
+// console.log(json1)
+
+// .........................
+
+// Conversão de texto para objeto:
+let contato = {
+    nome:"João",
+    telefone: 99400145,
+    cpf: "000.000.000-00"
+}
+
+let texto = JSON.stringify(contato)
+console.log(texto)
