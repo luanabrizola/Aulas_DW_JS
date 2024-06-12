@@ -32,7 +32,7 @@ funcaoAssincrona(false)
         console.log("Resultado: " + resposta )
     }))
     .catch((erro)=>{
-        console.log("Deu ruim")
+        console.log("Deu ruim ")
         console.log("Resultado:"+erro)
     })
 console.log("fim")
