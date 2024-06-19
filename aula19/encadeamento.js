@@ -2,7 +2,7 @@ function pedirPizza(tempo=2000){
     console.log("Iniciando o pedido da pizza")
     const promessa=new Promise((resolve, reject)=>{
         setTimeout(()=>{
-            if (saborDIsponivel){
+            if (saborDisponivel){
                 resolve("Pizza A caminho")
             } else {
                 reject("Não será possivel entregar a pizza")
@@ -19,7 +19,7 @@ function pedirUber(tempo=2000, motoristaDisponivel=true){
 
     const promessa=new Promise((resolve, reject)=>{
         setTimeout(()=>{
-            if (saborDIsponivel){
+            if (motoristaDisponivel){
                 resolve("Motorista a caminho")
             } else {
                 reject( new Error ("Não a motorista disponivel"))
@@ -31,20 +31,28 @@ function pedirUber(tempo=2000, motoristaDisponivel=true){
 }
 
 
-function irConfrartenização(){
+function irConfraternizacao() {
     pedirPizza(100)
-    .then((resposta)=>{
-        console.log(resposta)
-        console.log("A pizza chegou")
-        return pedirUber()
-        // .then(resposta =>{
-        //     console.log(resposta)
-        //     console.log("Motorista chegou")
-        // })
-
-    })
+        .then((resposta) => {
+            console.log(resposta);
+            console.log("A pizza chegou");
+            return pedirUber();
+        })
+        .then((resposta) => {
+            console.log(resposta);
+            console.log("Motorista chegou");
+        })
+        .catch((erro) => {
+            console.log(erro);
+        });
 }
-irConfrartenização()
+irConfraternizacao()
+
+
+// Caso queira testar falhas
+// pedirPizza(500, false)
+//     .then((resposta) => console.log(resposta))
+//     .catch((erro) => console.log(erro));
 
 // pedirPizza(500, false)
 //     .then((reposta) =>console.log(reposta))
